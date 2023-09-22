@@ -1,0 +1,31 @@
+<!DOCTYPE html>    
+<html>             
+    <head>       
+        <title>CareerHub</title>
+    </head>
+    <body>       
+        {% include 'bootstrap.html' %}
+        {% include 'nav.html' %}
+        {% include 'banner.html' %}
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4"> CareerHub</h1> 
+            <div>
+                <div>
+                <p class="lead" style="text-align:center">
+                    "Welcome to CareerHub – your ultimate destination for professional growth and success! Discover a world of opportunities tailored to your unique talents and aspirations. Whether you're a recent graduate or a seasoned professional looking for a fresh challenge, CareerHub offers a diverse range of job listings, expert career advice, and resources to help you excel. Join our vibrant community today and unlock your potential with the guidance and support you need to navigate your career journey. Your next big step awaits at CareerHub!"
+                </p>
+                </div>
+            </div>
+
+            <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+            <div>
+                {% for job in jobs %}
+                    {% include 'jobitems.html'%}
+                {% endfor %}
+            </div>
+        </div>
+        {% include 'footer.html'%}
+        
+    </body>
+</html>
+

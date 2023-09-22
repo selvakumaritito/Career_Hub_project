@@ -1,0 +1,57 @@
+
+        <style>
+            .shadow{
+                box-shadow: 3px 3px 10px black;
+                padding: 30px;
+            }
+        </style>
+ 
+        <div class="container" style="margin-top:100px">
+            <div class="col-md-offset-3 col-md-5">
+                <div class="shadow">
+                
+                    <form action="/job/{{job['id']}}/apply" method="POST">
+                        <h2 class="page-header text-primary text-center">Application Form</h2>
+                        {% with messages =get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category,message in messages %}
+                                    <div class="alert alert-{{category}}">{{message}}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                        <div class="form-group, mb-2">
+                            <label for="full_name">Full Name</label><br>
+                            <input type="text" id="full_name" name="full_name" placeholder="legaseema" required><br>
+                        </div>
+                        <div class="form-group, mb-2">
+                            <label for="email">Email</label><br>
+                            <input type="text" id="email" name="email" placeholder="legaseema@gmail.com" required><br>
+                        </div>
+                        <div class="form-group, mb-2">
+                            <label for="linkedin_url">LinkedIn URL</label><br>
+                            <input type="text" id="linkedin_url" name="linkedin_url" placeholder="https://linked.com/in/legaseema" required><br>
+                        </div>
+                        <div class="form-group, mb-2">
+                            <lable>Education</lable><br>
+                            <textarea name="education" required></textarea>
+                        </div>
+                        <div class="form-group, mb-2">
+                            <lable>Work Experience</lable><br>
+                            <textarea name="work_experience" required></textarea>
+                        </div>
+                        <div class="form-group, mb-2">
+                            <label for="resume URL">Resume URL</label><br>
+                            <input type="text" id="resume_url" name="resume_url" required><br>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-success btn-block">
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+

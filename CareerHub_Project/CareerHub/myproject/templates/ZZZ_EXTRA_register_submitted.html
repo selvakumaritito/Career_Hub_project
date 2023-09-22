@@ -1,0 +1,31 @@
+<!DOCTYPE html>    
+<html>             
+    <head>       
+        <title>Register Submitted</title>
+        
+    </head>
+    <body>
+        {% include 'bootstrap.html' %}
+        {% include 'nav.html' %}
+       
+        <div class="container">
+            <h1 class="text-center mt-2 mb-4">CareerHub</h1> 
+            <p>Your registeration has been submitted!!!</p>
+            
+            <b>Name</b>
+            <div class="mb-2">{{register['name']}}</div>
+
+            <b>Address</b>
+            <div class="mb-2">{{register['address']}}</div>
+
+            <b>Contact</b>
+            <div class="mb-2">{{register['contact']}}</div>
+
+            <b>mail</b>
+            <div class="mb-2">{{register['mail']}}</div>
+
+        </div>
+        {% include 'footer.html'%}
+        
+    </body>
+</html>
